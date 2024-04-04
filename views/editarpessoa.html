@@ -1,0 +1,196 @@
+<title>Editar Pessoa</title>
+<div class="container mt-5">
+    <h2>Editar Pessoa</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center mb-3">
+                <strong>Dados Pessoais</strong>
+            </div>
+            <form name="pessoafrm">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <style>
+                        </style>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" ng-model="pessoa.nome" name="nome"
+                                placeholder="Nome" required>
+                            <div ng-show="pessoafrm.nome.$error.required && pessoafrm.nome.$dirty" class="text-danger">
+                                O nome é obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="idade">Idade</label>
+                            <input type="text" class="form-control" ng-model="pessoa.idade" name="idade"
+                                placeholder="Idade" ng-pattern="/^\d*$/" ng-keypress="apenasNumeros($event)"
+                                minlength="1" maxlength="3" required>
+                            <div ng-show="(pessoafrm.idade.$error.required && pessoafrm.idade.$dirty) || (pessoa.idade > 130)"
+                                class="text-danger">
+                                <span ng-show="pessoafrm.idade.$error.required && pessoafrm.idade.$dirty">Insira uma
+                                    Idade entre 0 e 130.</span>
+                                <span ng-show="pessoa.idade > 130">A idade não pode ser maior que 130.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" ng-model="pessoa.email" name="email"
+                                placeholder="email@email.com" required>
+                            <div ng-show="pessoafrm.email.$error.required && pessoafrm.email.$dirty"
+                                class="text-danger">
+                                Insira um e-mail válido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="date" class="form-control" ng-model="pessoa.dataNascimento"
+                                name="dataNascimento" required>
+                            <div ng-show="pessoafrm.dataNascimento.$error.required && pessoafrm.dataNascimento.$dirty"
+                                class="text-danger">
+                                Insira uma data de nascimento válida.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" ng-model="pessoa.telefone" name="telefone"
+                                placeholder="Telefone" required>
+                            <div ng-show="pessoafrm.telefone.$error.required && pessoafrm.telefone.$dirty"
+                                class="text-danger">
+                                O telefone é obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="tel" class="form-control" ng-model="pessoa.celular" name="celular"
+                                placeholder="Celular" required>
+                            <div ng-show="pessoafrm.celular.$error.required && pessoafrm.celular.$dirty"
+                                class="text-danger">
+                                O celular é obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <div class="text-center">
+                <strong>Endereços</strong>
+            </div>
+            <form name="enderecofrm">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" class="form-control" ng-model="enderecoform.logradouro" name="logradouro"
+                                placeholder="Logradouro" required>
+                            <div ng-show="enderecofrm.logradouro.$error.required && enderecofrm.logradouro.$dirty"
+                                class="text-danger">
+                                O logradouro é obrigatório.
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="numero">Número</label>
+                            <input type="text" class="form-control" ng-model="enderecoform.numero" name="numero" placeholder="Número"
+                                ng-pattern="/^\d*$/" ng-keypress="apenasNumeros($event)" required>
+                            <div ng-show="enderecofrm.numero.$error.required && enderecofrm.numero.$dirty"
+                                class="text-danger">
+                                O Número é obrigatório.
+                            </div>                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" class="form-control" ng-model="enderecoform.bairro" name="bairro" placeholder="Bairro" required>
+                            <div ng-show="enderecofrm.bairro.$error.required && enderecofrm.bairro.$dirty"
+                                class="text-danger">
+                                O Bairro é obrigatório.
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" ng-model="enderecoform.cidade" name="cidade" placeholder="Cidade" required>
+                            <div ng-show="enderecofrm.cidade.$error.required && enderecofrm.cidade.$dirty"
+                                class="text-danger">
+                                A cidade é obrigatória.
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" ng-model="enderecoform.uf" name="uf" placeholder="UF"
+                                maxlength="2" oninput="this.value = this.value.toUpperCase().replace(/[^A-Za-z]/g, '')" required>
+                            <div ng-show="enderecofrm.uf.$error.required && enderecofrm.uf.$dirty"
+                                class="text-danger">
+                                O UF é obrigatório.
+                            </div>                                    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary mt-3 float-right"
+                            ng-click="validarDadosAdicionarEndereco()">Adicionar Endereço</button>
+                    </div>
+                </div>
+            </form>
+                <div class="card mt-3">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Endereços</th>
+                                </tr>
+                                <tr ng-class="'linha-destaque'">
+                                    <th>Logradouro</th>
+                                    <th>Número</th>
+                                    <th>Bairro</th>
+                                    <th>Cidade,UF</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="endereco in enderecos" ng-class="{ 'linha-destaque': $index % 2 !== 0 }">
+                                    <td>{{ endereco.logradouro }}</td>
+                                    <td>{{ endereco.numero }}</td>
+                                    <td>{{ endereco.bairro }}</td>
+                                    <td>{{ endereco.cidade + '-' + endereco.uf}}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger" ng-click="confirmarExcluirEndereco(endereco)">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button type="button" class="btn btn-secondary float-left" ng-click="irParaLista()">Voltar</button>
+                    <button type="submit" class="btn btn-success float-right"
+                        ng-click="validarDadosEditarPessoa()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>

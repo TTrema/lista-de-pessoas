@@ -1,0 +1,52 @@
+<title>Lista de Pessoas</title>
+<div class="container mt-5">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <h2>Listagem</h2>            
+                    <th colspan="1">
+                        <button class="btn btn-primary" ng-click="irParaCadastro()">Criar Nova Pessoa</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="coluna-nome">Nome</th>
+                    <th class="coluna-idade">Idade</th>
+                    <th class="coluna-data-nascimento">Data de Nascimento</th>
+                    <th class="coluna-email">Email</th>
+                    <th class="coluna-telefone">Telefone</th>
+                    <th class="coluna-celular">Celular</th>
+                    <th class="coluna-opcoes">Opções</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr ng-repeat="pessoa in pessoas" ng-class="{ 'linha-destaque': $index % 2 == 0 }">
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.idade }}</td>
+                    <td>{{ pessoa.dataNascimento | date:'dd/MM/yyyy' }}</td>
+                    <td>{{ pessoa.email }}</td>
+                    <td>{{ pessoa.telefone }}</td>
+                    <td>{{ pessoa.celular }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info" ng-click="irParaEditarPessoa(pessoa)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger" ng-click="confirmarExcluirPessoa(pessoa)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel"
+    aria-hidden="true">
+</div>
+
+<div class="modal fade" id="edicaoModal" tabindex="-1" role="dialog" aria-labelledby="edicaoModalLabel"
+    aria-hidden="true">
+</div>
