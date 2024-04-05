@@ -36,7 +36,7 @@ app.controller('PessoaController', function ($scope, $http, $routeParams, $locat
     };
 
     // Função que verifica a validade do formulario de dado da pessoa antes de adicionar
-    $scope.validarDadosAdicionarPessoa = function() {
+    $scope.validarDadosAdicionarPessoa = function () {
         // Marca todos os campos não preenchidos
         angular.forEach($scope.pessoafrm.$error.required, function (field) {
             field.$setDirty();
@@ -76,7 +76,7 @@ app.controller('PessoaController', function ($scope, $http, $routeParams, $locat
     };
 
     // Função que verifica a validade do formulario de dado da pessoa antes de editar
-    $scope.validarDadosEditarPessoa = function() {
+    $scope.validarDadosEditarPessoa = function () {
         // Marcar todos os campos não preenchidos
         angular.forEach($scope.pessoafrm.$error.required, function (field) {
             field.$setDirty();
@@ -128,7 +128,7 @@ app.controller('PessoaController', function ($scope, $http, $routeParams, $locat
     };
 
     // Função que verifica a validade do formulario de dado do endereço antes de adicionar 
-    $scope.validarDadosAdicionarEndereco = function() {
+    $scope.validarDadosAdicionarEndereco = function () {
         // Marcar todos os campos não tocados
         angular.forEach($scope.enderecofrm.$error.required, function (field) {
             field.$setDirty();
@@ -192,7 +192,7 @@ app.controller('PessoaController', function ($scope, $http, $routeParams, $locat
     };
 
     // FUNÇÔES GERAIS
- 
+
     // Função para voltar para a página de lista de pessoas
     $scope.irParaLista = function () {
         $location.path('/lista');

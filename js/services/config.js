@@ -1,11 +1,11 @@
-app.factory('ConfigService', function() {
-  var config = {
-      chaveAutenticacao: ''
-  };
+app.factory('ConfigService', function () {
+    var config = {
+        chaveAutenticacao: ''
+    };
 
-  return {
-      getConfig: function() {
-          return config;
-      }
-  };
+    return {
+        getConfig: function () {
+            return config;
+        }
+    };
 });

@@ -12,7 +12,7 @@ app.controller('ListaController', function ($scope, $http, $location, ConfigServ
     };
 
     // Função para carregar a lista com todas as pessoas
-    $scope.carregarPessoas = function () {   
+    $scope.carregarPessoas = function () {
         $http.get('https://www.selida.com.br/avaliacaotecnica/api/Pessoas/GetAll', headersConfig)
             .then(function (response) {
                 $scope.pessoas = response.data.data;
@@ -52,12 +52,12 @@ app.controller('ListaController', function ($scope, $http, $location, ConfigServ
     // Função para ir para a página de cadastro
     $scope.irParaCadastro = function () {
         $location.path('/cadastro');
-    };    
+    };
 
     // Função para ir para a página de edição da pessoa
     $scope.irParaEditarPessoa = function (pessoa) {
-        $location.path('/editarpessoa/' + pessoa.pessoaId); 
-    };  
-    
+        $location.path('/editarpessoa/' + pessoa.pessoaId);
+    };
+
 
 });

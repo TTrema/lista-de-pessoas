@@ -1,4 +1,4 @@
-﻿# Site de cadastro feito com AngularJS
+﻿﻿# Site de cadastro feito com AngularJS
 
 Possui páginas de cadastro, listagem, edição, e remoção de pessoas onde cada pessoa pode cadastrar
 mais de um endereço.
@@ -10,11 +10,11 @@ Ferramentas utilizadas:
 - Bootstrap 
 - AngularJS 
 
-## Demonstração Parcial:
+## Instruções de uso
 
-Uma demonstração parcial do site sem acesso a API está disponível em:
+A aplicação pode ser completamente testada através do link:
 
-https://ttrema.github.io/lista-de-pessoas/#!/lista
+https://teststar1.netlify.app
 
 ## Instruções de uso local
 
@@ -22,15 +22,15 @@ https://ttrema.github.io/lista-de-pessoas/#!/lista
 
     ./js/services/config.js
 
-### 2- Utilize o comando:
+### 2- Instale o live-server com o comando:
 
-    npm install -g http-server
+    npm install -g live-server
 
 ### 3- Na raiz do projeto execute:
 
-    http-server
+    live-server
    
-### 4- Acessar o endereço mostrado, geralmente é:
+### 4- Acesse o endereço mostrado, geralmente é:
 
     http://localhost:8000/
 
