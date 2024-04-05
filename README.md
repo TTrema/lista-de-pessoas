@@ -1,4 +1,4 @@
-# Site de cadastro feito com AngularJS
+# Site de cadastro de pessoas feito com AngularJS
 
 Possui páginas de cadastro, listagem, edição, e remoção de pessoas onde cada pessoa pode cadastrar
 mais de um endereço.
