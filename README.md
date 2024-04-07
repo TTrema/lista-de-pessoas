@@ -26,11 +26,11 @@ A aplicação pode ser completamente testada através do link:
 
     ./js/services/config.js
 
-### 3- Instale o live-server com o comando:
+### 3- Na raiz do projeto instale o live-server com o comando:
 
     npm install -g live-server
 
-### 4- Na raiz do projeto execute:
+### 4- Na raiz do projeto execute o comando:
 
     live-server
    
